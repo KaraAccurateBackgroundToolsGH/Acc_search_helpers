@@ -1,5 +1,5 @@
-from datetime import datetime
-import sys
+# from datetime import datetime
+# import sys
 #TODO:// MAKE STATE FUNCTION THAT GETS THE STATE AND CONVERTS IT INTO A PROPER FORMAT
 
 state = input("State:")
