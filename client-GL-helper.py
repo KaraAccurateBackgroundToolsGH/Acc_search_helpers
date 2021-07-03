@@ -1,9 +1,11 @@
 from datetime import datetime
-# from rich import print
+# from rich import console.print
 from rich.console import Console
+# import tkinter as tk
 import sys
 
 console = Console()
+# window = tk.Tk
 #TODO:// MAKE PERLS FOR ALL THE SPECIAL CLIENTS
 #TODO ADD EXTRA ALTS FOR AMAZON VENDORS YOU ENCOUNTER
 #NOTE CLIENT EQUIVILANCY FUNCTION WORKS FINE,
@@ -20,7 +22,7 @@ no = ["N","n","No","no","NO"]
 
 
 alts_list = [["ACCURATENOW","ACCURATE","ACC"], ["AHOLD","AHOLD FRESH"], ["AHOLD RETAIL","AHOLD RET","AHOLD R"],
-["AHOLD S&S","AHOLD S + S","AHOLD STOP & SHOP","AHOLD STOP"], ["AL AIR","ALASKA"], ["AMAZON","AMZ"],
+["AHOLD S&S","AHOLD S + S","AHOLD STOP & SHOP","AHOLD STOP"], ["AL AIR","ALASKA"], ["AMAZON","AMZ","AMAZON SALESFORCE"],
 ["AMERICAN ELECTRIC","AMERICAN ELECTRIC POWER","AM ELEC"], ["AMERICAN MULTI","AMERICAN MULTI CINEMA","AM MULTI","AMERICAN CINEMA"],
 ["BANNER","BH"], ["CALY"], ["CPS","CPS EN"], ["F5","F5 NET"], ["FPI","FPI MAN"], ["FRESH DIR","FRESH"],["HORIZON","HOR"],
 ["JCP","JCP PROCUREMENT","JCP PROCUREMENT INCC"], ["MOLSON","MOLSON COORS","MILLER","MILLERCOORS","MOLSON COORS INT."], ["MUN"], 
@@ -48,126 +50,126 @@ def get_client(client):
 
 
 def accnow(): 
-    print("Do not report continued without finding (basically a deferral)")
-    print("Do not report accelerated rehabilitation program(ARD)")
-    print("Do not report retired")
+    console.console.print("Do not report continued without finding (basically a deferral)",style="bold red")
+    console.print("Do not report accelerated rehabilitation program(ARD)",style="bold red")
+    console.print("Do not report retired",style="bold red")
 def aholdfresh(): 
-    print("Report ACTIVE WARRANTS")
-    print("Report ACTIVE / PENDING CHARGES")
-    print("Do not report NON-CONVICTIONS / ALTERNATE DISPOSITIONS (including diversions, deferrals, etc.) ")
-    print("Do not report FELONY CHARGES involving animals or gambling")
-    print("Do not report MISDEMEANOR charges involving animals, gambling, alcohol, false ID, or licensing")
-    print("Do not report Traffic-related charges regardless of charge level")
+    console.print("Report ACTIVE WARRANTS",style="bold red")
+    console.print("Report ACTIVE / PENDING CHARGES",style="bold red")
+    console.print("Do not report NON-CONVICTIONS / ALTERNATE DISPOSITIONS (including diversions, deferrals, etc.) ",style="bold red")
+    console.print("Do not report FELONY CHARGES involving animals or gambling",style="bold red")
+    console.print("Do not report MISDEMEANOR charges involving animals, gambling, alcohol, false ID, or licensing",style="bold red")
+    console.print("Do not report Traffic-related charges regardless of charge level",style="bold red")
 def aholdretail(): 
-    print("Report ACTIVE WARRANTS")
-    print("Report ACTIVE / PENDING CHARGES")
-    print("Do not report NON-CONVICTIONS / ALTERNATE DISPOSITIONS (including diversions, deferrals, etc.) ")
+    console.print("Report ACTIVE WARRANTS",style="bold red")
+    console.print("Report ACTIVE / PENDING CHARGES",style="bold red")
+    console.print("Do not report NON-CONVICTIONS / ALTERNATE DISPOSITIONS (including diversions, deferrals, etc.) ",style="bold red")
 def aholdstop(): 
-    print("Report ACTIVE WARRANTS")
-    print("Report ACTIVE / PENDING CHARGES")
-    print("Do not report NON-CONVICTIONS / ALTERNATE DISPOSITIONS (including diversions, deferrals, etc.) ")
+    console.print("Report ACTIVE WARRANTS",style="bold red")
+    console.print("Report ACTIVE / PENDING CHARGES",style="bold red")
+    console.print("Do not report NON-CONVICTIONS / ALTERNATE DISPOSITIONS (including diversions, deferrals, etc.) ",style="bold red")
 def AlAir(): 
-    print("Report NO SALARY VERIFICATION - $25,000 ALREADY VERIFIED")
+    console.print("Report NO SALARY VERIFICATION - $25,000 ALREADY VERIFIED")
 def amz(): 
-    print("Do not report  accelerated rehabilitation program (ard)")
-    print("Do not report ACTIVE WARRANTS if offense is located in Kentucky (KY); OR candidate residence location in U.S. Virgin Islands (VI)")
-    print("Do not report first offender act based on the candidate residence location in georgia (ga) -- not offense location")
-    print("Report pending or alternate dispositions (including diversions, deferrals, etc.) based on the candidate position location in hawaii (hi), montgomery county (md), or pennsylvania (pa); or residence in new mexico (nm); or position and residence in new york (ny)")
-    print("Do not report retired")
-    print("Do not report out of 10 year scope based on the Candidate residence location in district of Columbia (dc) -- not position location")
-    print("Do not report out of 7 year scope, unless candidate makes $25,000 or more annually based on the candidate residence location only in new york (ny) -- not position location")
-    print("You can report non-convictions / alternate dispositions (including diversions, deferrals, etc.) where the sentenced probationary period has been met.")
-    print("Report scope for misdemeanor convictions (or active warrants on convictions) is determined by disposition date, jail, probation (where permitted), prison, or parole duration, as applicable.")
-    print("Do not report misdemeanor marijuana cases outside of 2 year scope based on the candidate residence location in california (ca) -- not position location")
-    print("Report non-felony marijuana convictions if position is located in san francisco, ca (still need to consider california statewide requirement above)")
-    print("Do not report felony charges outside 7 year (may only use incarceration for the 7 years scope - not probation or parole - otherwise use disposition date) if current residence or position is located in hawaii")
-    print("Do not report: misdemeanor charges outside 5 year (may only use incarceration for the 5 year scope - not probation or parole - otherwise use disposition date) if current residence or position is located in hawaii")
-    print("Probation is not permitted to be used for scope if the candidate’s residence and/or position location are in district of columbia (dc) and nevada (nv).")
-    print("any sentencing that is a result of a probation violation / revocation should not be used to bring a case into scope if candidate's residence and/or position location are in ca, hi, ks, ma, md, nm, ny, wa, and madison wi (dane county).this includes jail or an active warrant issued only when it is from a probation violation or revocation.if the final disposition is updated, that can still bring the case into scope (ex: probation revoked, disposition updated to guilty).")
+    console.print("Do not report  accelerated rehabilitation program (ard)",style="bold red")
+    console.print("Do not report ACTIVE WARRANTS if offense is located in Kentucky (KY); OR candidate residence location in U.S. Virgin Islands (VI)",style="bold red")
+    console.print("Do not report first offender act based on the candidate residence location in georgia (ga) -- not offense location",style="bold red")
+    console.print("Report pending or alternate dispositions (including diversions, deferrals, etc.) based on the candidate position location in hawaii (hi), montgomery county (md), or pennsylvania (pa); or residence in new mexico (nm); or position and residence in new york (ny)",style="bold red")
+    console.print("Do not report retired",style="bold red")
+    console.print("Do not report out of 10 year scope based on the Candidate residence location in district of Columbia (dc) -- not position location",style="bold red")
+    console.print("Do not report out of 7 year scope, unless candidate makes $25,000 or more annually based on the candidate residence location only in new york (ny) -- not position location",style="bold red")
+    console.print("You can report non-convictions / alternate dispositions (including diversions, deferrals, etc.) where the sentenced probationary period has been met.",style="bold red")
+    console.print("Report scope for misdemeanor convictions (or active warrants on convictions) is determined by disposition date, jail, probation (where permitted), prison, or parole duration, as applicable.",style="bold red")
+    console.print("Do not report misdemeanor marijuana cases outside of 2 year scope based on the candidate residence location in california (ca) -- not position location",style="bold red")
+    console.print("Report non-felony marijuana convictions if position is located in san francisco, ca (still need to consider california statewide requirement above)",style="bold red")
+    console.print("Do not report felony charges outside 7 year (may only use incarceration for the 7 years scope - not probation or parole - otherwise use disposition date) if current residence or position is located in hawaii",style="bold red")
+    console.print("Do not report: misdemeanor charges outside 5 year (may only use incarceration for the 5 year scope - not probation or parole - otherwise use disposition date) if current residence or position is located in hawaii",style="bold red")
+    console.print("Probation is not permitted to be used for scope if the candidate’s residence and/or position location are in district of columbia (dc) and nevada (nv).",style="bold red")
+    console.print("any sentencing that is a result of a probation violation / revocation should not be used to bring a case into scope if candidate's residence and/or position location are in ca, hi, ks, ma, md, nm, ny, wa, and madison wi (dane county).this includes jail or an active warrant issued only when it is from a probation violation or revocation.if the final disposition is updated, that can still bring the case into scope (ex: probation revoked, disposition updated to guilty).",style="bold red")
 def AmElec(): 
-    print("Do not report any dismdemeanor charges")
-    print("Do not report diversion/deferral")
+    console.print("Do not report any dismdemeanor charges",style="bold red")
+    console.print("Do not report diversion/deferral",style="bold red")
 def AmMult():
-    print("Report active warrants within 7 years involving neglect, cruelty, sex crimes, endangerment, trespassing, or violence")
-    print("Report pending charges involving neglect, cruelty, sex crimes, endangerment, trespassing, or violence")
-    print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ")
-    print("If position/residence is located in California do not report marijuana possesion offenses")
+    console.print("Report active warrants within 7 years involving neglect, cruelty, sex crimes, endangerment, trespassing, or violence",style="bold red")
+    console.print("Report pending charges involving neglect, cruelty, sex crimes, endangerment, trespassing, or violence",style="bold red")
+    console.print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ",style="bold red")
+    console.print("If position/residence is located in California do not report marijuana possesion offenses",style="bold red")
 def BaHealth(): 
-    print("Report active warrants")
-    print("Report active / pending charges")
-    print("Do not report non-convictions / alternate dispositions - exception: report if the disposition includes the word 'deferral' or 'deferred' except if position / residence is in CA")
+    console.print("Report active warrants",style="bold red")
+    console.print("Report active / pending charges",style="bold red")
+    console.print("Do not report non-convictions / alternate dispositions - exception: report if the disposition includes the word 'deferral' or 'deferred' except if position / residence is in CA",style="bold red")
 def Cal(): 
-    print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ")
-    print("Report active warrants")
-    print("Report active / pending charges")
+    console.print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ",style="bold red")
+    console.print("Report active warrants",style="bold red")
+    console.print("Report active / pending charges",style="bold red")
 def CpsEn(): 
-    print("Report all convictions regardless of scope")
+    console.print("Report all convictions regardless of scope",style="bold red")
 def F5(): 
-    print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ")
-    print("Do not report misdemeanor charges outside 5 year scope")
-    print("Do not report marijuana charges outside 2 year scope")
+    console.print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ",style="bold red")
+    console.print("Do not report misdemeanor charges outside 5 year scope",style="bold red")
+    console.print("Do not report marijuana charges outside 2 year scope",style="bold red")
 def FPI(): 
-    print("Do not report accelerated rehabilitation program (ard)")
-    print("Do not report active warrants")
-    print("Do not report active / pending charges")
-    print("Do not report adjudication withheld")
-    print("Do not report bail / bond forfeiture")
-    print("Do not report accelerated rehabilitation program (ard)")
-    print("Do not report accelerated rehabilitation program (ard)")
-    print("Do not report diversion / deferral")
-    print("Do not report plea in abeyance")
-    print("Do not report prayer for judgment ")
-    print("Do not report retired")
-    print("Do not report felony deferred adjudication")
+    console.print("Do not report accelerated rehabilitation program (ard)",style="bold red")
+    console.print("Do not report active warrants",style="bold red")
+    console.print("Do not report active / pending charges",style="bold red")
+    console.print("Do not report adjudication withheld",style="bold red")
+    console.print("Do not report bail / bond forfeiture",style="bold red")
+    console.print("Do not report accelerated rehabilitation program (ard)",style="bold red")
+    console.print("Do not report accelerated rehabilitation program (ard)",style="bold red")
+    console.print("Do not report diversion / deferral",style="bold red")
+    console.print("Do not report plea in abeyance",style="bold red")
+    console.print("Do not report prayer for judgment ",style="bold red")
+    console.print("Do not report retired",style="bold red")
+    console.print("Do not report felony deferred adjudication",style="bold red")
 def FreshDir(): 
-    print("If position/residence if location in NY only - NO SALARY VERIFICATION - $25,000 ALREADY VERIFIED")
+    console.print("If position/residence if location in NY only - NO SALARY VERIFICATION - $25,000 ALREADY VERIFIED",style="bold red")
 def Horizon(): 
-    print("No salary verification needed - $25,000 already verified")
+    console.print("No salary verification needed - $25,000 already verified",style="bold red")
 def JCP(): 
-    print("Do not report plea in abeyance")
-    print("Do not report prayer for judgment ")
-    print("Report felony convictions involving theft, sex, or violence regardless of scope")
+    console.print("Do not report plea in abeyance",style="bold red")
+    console.print("Do not report prayer for judgment ",style="bold red")
+    console.print("Report felony convictions involving theft, sex, or violence regardless of scope",style="bold red")
 def MoCoors (): 
-    print("Do not report out of 7 year scope from disposition date. (do not consider any sentencing. use of disposition date rather than sentencing date is intentional.)")
+    console.print("Do not report out of 7 year scope from disposition date. (do not consider any sentencing. use of disposition date rather than sentencing date is intentional.)",style="bold red")
 def Munich(): 
-    print("Do not report any misdemeanor charges")
+    console.print("Do not report any misdemeanor charges",style="bold red")
 def NaInc(): 
-    print("Report active warrants")
-    print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ")
-    print("Do not report misdemeanor pending charges")
+    console.print("Report active warrants",style="bold red")
+    console.print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ",style="bold red")
+    console.print("Do not report misdemeanor pending charges",style="bold red")
 def NeBalance(): 
-    print("Do not report misdemeanor non-convictions / alternate dispositions (including diversions, deferrals, etc.)")
+    console.print("Do not report misdemeanor non-convictions / alternate dispositions (including diversions, deferrals, etc.)",style="bold red")
 def OnSemiconductor(): 
-    print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ")
+    console.print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ",style="bold red")
 def PuStorage(): 
-    print("Do not report accelerated rehabilitation program (ard)")
-    print("Do not report active / pending charges")
-    print("Do not report adjudication withheld")
-    print("Do not report bail / bond forfeiture")
-    print("Do not report accelerated rehabilitation program (ard)")
-    print("Do not report diversion / deferral except judgement withheld, suspended imposition of sentence, and stet docket")
-    print("Do not report plea in abeyance")
-    print("Do not report prayer for judgment ")
-    print("Do not report probation before judgement")
-    print("Do not report retired")
-    print("Report felony deferred adjudication")
+    console.print("Do not report accelerated rehabilitation program (ard)",style="bold red")
+    console.print("Do not report active / pending charges",style="bold red")
+    console.print("Do not report adjudication withheld",style="bold red")
+    console.print("Do not report bail / bond forfeiture",style="bold red")
+    console.print("Do not report accelerated rehabilitation program (ard)",style="bold red")
+    console.print("Do not report diversion / deferral except judgement withheld, suspended imposition of sentence, and stet docket",style="bold red")
+    console.print("Do not report plea in abeyance",style="bold red")
+    console.print("Do not report prayer for judgment ",style="bold red")
+    console.print("Do not report probation before judgement",style="bold red")
+    console.print("Do not report retired",style="bold red")
+    console.print("Report felony deferred adjudication",style="bold red")
 def ReFinancial (): 
-    print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ")
+    console.print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ",style="bold red")
 def skyg(): 
-    print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ")
+    console.print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ",style="bold red")
 def starbucks(): 
-    # print("Do not report misdemeanor charges outside 3 year scope")
+    # console.print("Do not report misdemeanor charges outside 3 year scope",style="bold red")
     rule1 = "Do not report misdemeanor charges outside 3 year scope"
     return rule1
 def Disn(): 
-    print("Do not report active warrants")
-    print("Do not report active / pending charges")
+    console.print("Do not report active warrants",style="bold red")
+    console.print("Do not report active / pending charges",style="bold red")
 def UbRazier(): 
-    print("Report theft, alcohol, drug, or insurance / proof of financial responsibility infractions / lower level charges")
+    console.print("Report theft, alcohol, drug, or insurance / proof of financial responsibility infractions / lower level charges",style="bold red")
 def UnBank(): 
-    print("REPORT ALL DISPOSITIONS")
+    console.print("REPORT ALL DISPOSITIONS",style="bold red")
 def via(): 
-    print("Refer to R Client Specific Rules - Viacom for additional information")
+    console.print("Refer to R Client Specific Rules - Viacom for additional information",style="bold red")
 
 
 
@@ -208,10 +210,10 @@ def client_cases(client):
     Switch_func = client_switcher.get(client, lambda: "No special restrictions on entered client.")
     # Execute the function
     console.print(Switch_func(),style="bold red")
-    # print(Switch_func())
+    # console.print(Switch_func())
 
 client = get_client(client)
 client = client_cases(client)
 sys.exit(client)
 
-# print(client)
+# console.print(client)
