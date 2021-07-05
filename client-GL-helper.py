@@ -50,27 +50,42 @@ def get_client(client):
 
 
 def accnow(): 
+    NRcontfind,NR_ARD, NRret = [True,"NRcontfind "],[True,"NR_ARD "],[True,"NRret "]
     console.console.print("Do not report continued without finding (basically a deferral)",style="bold red")
     console.print("Do not report accelerated rehabilitation program(ARD)",style="bold red")
     console.print("Do not report retired",style="bold red")
+    return NRcontfind,NR_ARD, NRret 
 def aholdfresh(): 
+    Ractwarr, Ractpend, NRaltdispo = [True,"Ractwarr "],[True,"Ractpend "],[True,"NRaltdispo "]
+    NRfel_an_gam,NRmis_an_gam, NRtraff = [True,"NRfel_an_gam "],[True,"NRmis_an_gam "],[True,"NRtraff "]
     console.print("Report ACTIVE WARRANTS",style="bold red")
     console.print("Report ACTIVE / PENDING CHARGES",style="bold red")
     console.print("Do not report NON-CONVICTIONS / ALTERNATE DISPOSITIONS (including diversions, deferrals, etc.) ",style="bold red")
     console.print("Do not report FELONY CHARGES involving animals or gambling",style="bold red")
     console.print("Do not report MISDEMEANOR charges involving animals, gambling, alcohol, false ID, or licensing",style="bold red")
     console.print("Do not report Traffic-related charges regardless of charge level",style="bold red")
+    return Ractwarr, Ractpend, NRaltdispo,NRfel_an_gam,NRmis_an_gam, NRtraff
 def aholdretail(): 
+    Ractwarr, Ractpend, NRaltdispo = [True,"Ractwarr "],[True,"Ractpend "],[True,"NRaltdispo "]
     console.print("Report ACTIVE WARRANTS",style="bold red")
     console.print("Report ACTIVE / PENDING CHARGES",style="bold red")
     console.print("Do not report NON-CONVICTIONS / ALTERNATE DISPOSITIONS (including diversions, deferrals, etc.) ",style="bold red")
+    return Ractwarr, Ractpend, NRaltdispo
 def aholdstop(): 
+    Ractwarr, Ractpend, NRaltdispo = [True,"Ractwarr "],[True,"Ractpend "],[True,"NRaltdispo "]
     console.print("Report ACTIVE WARRANTS",style="bold red")
     console.print("Report ACTIVE / PENDING CHARGES",style="bold red")
     console.print("Do not report NON-CONVICTIONS / ALTERNATE DISPOSITIONS (including diversions, deferrals, etc.) ",style="bold red")
+    return Ractwarr, Ractpend, NRaltdispo
 def AlAir(): 
+    Rnosal = [True,"Rnosal"]
     console.print("Report NO SALARY VERIFICATION - $25,000 ALREADY VERIFIED")
+    return Rnosal
 def amz(): 
+    NR_ARD, NractKT,NR1stoffGA,NRaltdispoHI,NRret,NR10yrDC = [True,"NR_ARD "],[True,"NractKT"],[True,"NR1stoffGA"],[True,"NRaltdispoHI"],[True,"NR10yrDC"]
+    NR7yr25k,Raltdisp_probmet,RscpMSD, NRmjCA, RmjSF = [True,"NR7yr25k"],[True,"Raltdisp-probmet"],[True,"RscpMSD"],[True,"NRmjCA"],[True,"RmjSF"]
+    NRyrfelHI,NR5yrmisHI,NoprobDCNV= [True,"NRyrfelHI"],[True,"NR5yrmisHI"],[True,"NoprobDCNV"]
+    
     console.print("Do not report  accelerated rehabilitation program (ard)",style="bold red")
     console.print("Do not report ACTIVE WARRANTS if offense is located in Kentucky (KY); OR candidate residence location in U.S. Virgin Islands (VI)",style="bold red")
     console.print("Do not report first offender act based on the candidate residence location in georgia (ga) -- not offense location",style="bold red")
@@ -86,62 +101,96 @@ def amz():
     console.print("Do not report: misdemeanor charges outside 5 year (may only use incarceration for the 5 year scope - not probation or parole - otherwise use disposition date) if current residence or position is located in hawaii",style="bold red")
     console.print("Probation is not permitted to be used for scope if the candidate’s residence and/or position location are in district of columbia (dc) and nevada (nv).",style="bold red")
     console.print("any sentencing that is a result of a probation violation / revocation should not be used to bring a case into scope if candidate's residence and/or position location are in ca, hi, ks, ma, md, nm, ny, wa, and madison wi (dane county).this includes jail or an active warrant issued only when it is from a probation violation or revocation.if the final disposition is updated, that can still bring the case into scope (ex: probation revoked, disposition updated to guilty).",style="bold red")
+    return NractKT,NR1stoffGA,NRaltdispoHI,NR10yrDC,NRret,NR_ARD,NR7yr25k,Raltdisp_probmet,RscpMSD, NRmjCA, RmjSF,NRyrfelHI,NR5yrmisHI,NoprobDCNV
 def AmElec(): 
+    NRmsd,Nrdivdef = [True,"NRmsd"],[True,"Nrdivdef"]
     console.print("Do not report any dismdemeanor charges",style="bold red")
     console.print("Do not report diversion/deferral",style="bold red")
+    return NRmsd,Nrdivdef
 def AmMult():
+    Ract7yr,Rpendnegcr,NRaltdispo,NR_CAmj = [True,"Ract7yr"],[True,"Rpendnegcr"],[True,"Ractpend "],[True,"NR_CAmj"]
     console.print("Report active warrants within 7 years involving neglect, cruelty, sex crimes, endangerment, trespassing, or violence",style="bold red")
     console.print("Report pending charges involving neglect, cruelty, sex crimes, endangerment, trespassing, or violence",style="bold red")
     console.print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ",style="bold red")
     console.print("If position/residence is located in California do not report marijuana possesion offenses",style="bold red")
+    return Ract7yr,Rpendnegcr,NRaltdispo,NR_CAmj
 def BaHealth(): 
+    Ractwarr,Ractpend,Nraltdisexcdef = [True,"Ractwarr "],[True,"Ractpend "],[True,"Nraltdisexcdef"]
     console.print("Report active warrants",style="bold red")
     console.print("Report active / pending charges",style="bold red")
     console.print("Do not report non-convictions / alternate dispositions - exception: report if the disposition includes the word 'deferral' or 'deferred' except if position / residence is in CA",style="bold red")
+    return Ractwarr,Ractpend,Nraltdisexcdef 
 def Cal(): 
+    NRaltdispo, Ractwarr, Ractpend = [True,"NRaltdispo "],[True,"Ractwarr "],[True,"Ractpend "]
     console.print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ",style="bold red")
     console.print("Report active warrants",style="bold red")
     console.print("Report active / pending charges",style="bold red")
+    return NRaltdispo, Ractwarr, Ractpend
 def CpsEn(): 
+    RepALLconv = [True,"RepALLconv"]
     console.print("Report all convictions regardless of scope",style="bold red")
+    return RepALLconv
 def F5(): 
+    NRaltdispo, NRmisd5year, NRmj2yr = [True,"NRaltdispo "],[True,"NRmisd5year"],[True,"NRmj2yr"]
     console.print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ",style="bold red")
     console.print("Do not report misdemeanor charges outside 5 year scope",style="bold red")
     console.print("Do not report marijuana charges outside 2 year scope",style="bold red")
 def FPI(): 
+    NR_ARD,NRactwarr,NRactpend,NRadjwith,NRbailbond,NR_ARD,Nrdivdef = [True,"NR_ARD "],[True,"NRactwarr"],[True,"NRactpend"],[True,"NRadjwith"],[True,"NR_ARD "],[True,"Nrdivdef"]
+    NRabeyplea,NRjudpray,NRfeldefadj = [True,"NRabeyplea"],[True,"NRjudpray"],[True,"NRfeldefadj"]
+    
     console.print("Do not report accelerated rehabilitation program (ard)",style="bold red")
     console.print("Do not report active warrants",style="bold red")
     console.print("Do not report active / pending charges",style="bold red")
     console.print("Do not report adjudication withheld",style="bold red")
     console.print("Do not report bail / bond forfeiture",style="bold red")
     console.print("Do not report accelerated rehabilitation program (ard)",style="bold red")
-    console.print("Do not report accelerated rehabilitation program (ard)",style="bold red")
     console.print("Do not report diversion / deferral",style="bold red")
     console.print("Do not report plea in abeyance",style="bold red")
-    console.print("Do not report prayer for judgment ",style="bold red")
+    console.print("Do not report prayer for judgment",style="bold red")
     console.print("Do not report retired",style="bold red")
     console.print("Do not report felony deferred adjudication",style="bold red")
+    
+    return NR_ARD,NRactwarr,NRactpend,NRadjwith,NRbailbond,NR_ARD,Nrdivdef,NRabeyplea,NRjudpray,NRfeldefadj 
 def FreshDir(): 
+    NoSalVerNY = [True,"NoSalVerNY"]
     console.print("If position/residence if location in NY only - NO SALARY VERIFICATION - $25,000 ALREADY VERIFIED",style="bold red")
+    return NoSalVerNY
 def Horizon(): 
+    NoSalVer  = [True,"NoSalVer"]
     console.print("No salary verification needed - $25,000 already verified",style="bold red")
+    return NoSalVer
 def JCP(): 
+    NRabeyplea,NRjudpray,R_ALLfel = [True,"NRabeyplea"] , [True,"NRjudpray"],[True,"R_ALLfel"]
     console.print("Do not report plea in abeyance",style="bold red")
     console.print("Do not report prayer for judgment ",style="bold red")
     console.print("Report felony convictions involving theft, sex, or violence regardless of scope",style="bold red")
 def MoCoors (): 
+    NR7yrdispo = [True,"NR7yrdispo"]
     console.print("Do not report out of 7 year scope from disposition date. (do not consider any sentencing. use of disposition date rather than sentencing date is intentional.)",style="bold red")
+    return NR7yrdispo
 def Munich(): 
+    NRmsd = [True,"NRmsd"]
     console.print("Do not report any misdemeanor charges",style="bold red")
+    return NRmsd
 def NaInc(): 
+    Ractwarr, NRaltdispo ,NRmisdpend = [True,"NRactwarr"],[True,"NRaltdispo "],[True,"NRmisdpend"]
     console.print("Report active warrants",style="bold red")
     console.print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ",style="bold red")
     console.print("Do not report misdemeanor pending charges",style="bold red")
+    return Ractwarr, NRaltdispo ,NRmisdpend
 def NeBalance(): 
+    NRmisdAlt = [True,"NRmisdAlt"]
     console.print("Do not report misdemeanor non-convictions / alternate dispositions (including diversions, deferrals, etc.)",style="bold red")
-def OnSemiconductor(): 
+    return NRmisdAlt
+def OnSemiconductor():
+    NRaltdispo = [True,"NRaltdispo "]
     console.print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ",style="bold red")
+    return NRaltdispo
 def PuStorage(): 
+    NR_ARD,NRactwarr,NRactpend,NRadjwith,NRbailbond,NR_ARD,Nrdivdef = [True,"NR_ARD "],[True,"NRactwarr"],[True,"NRactpend"],[True,"NRadjwith"],[True,"NR_ARD "],[True,"Nrdivdef"]
+    NRabeyplea,NRjudpray,NRfeldefadj = [True,"NRabeyplea"],[True,"NRjudpray"],[True,"NRfeldefadj"]
+
     console.print("Do not report accelerated rehabilitation program (ard)",style="bold red")
     console.print("Do not report active / pending charges",style="bold red")
     console.print("Do not report adjudication withheld",style="bold red")
@@ -153,24 +202,38 @@ def PuStorage():
     console.print("Do not report probation before judgement",style="bold red")
     console.print("Do not report retired",style="bold red")
     console.print("Report felony deferred adjudication",style="bold red")
-def ReFinancial (): 
+    
+    return NR_ARD,NRactwarr,NRactpend,NRadjwith,NRbailbond,NR_ARD,Nrdivdef,NRabeyplea,NRjudpray,NRfeldefadj 
+def ReFinancial ():
+    NRaltdispo = [True,"NRaltdispo "]
     console.print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ",style="bold red")
+    return NRaltdispo
 def skyg(): 
+    NRaltdispo = [True,"NRaltdispo "]
     console.print("Do not report non-convictions / alternate dispositions (including diversions, deferrals, etc.) ",style="bold red")
+    return NRaltdispo
 def starbucks(): 
-    # console.print("Do not report misdemeanor charges outside 3 year scope",style="bold red")
+    NRmsd3yr = [True,"NRmsd3yr"]
     rule1 = "Do not report misdemeanor charges outside 3 year scope"
-    return rule1
+    print(rule1)
+    return NRmsd3yr
 def Disn(): 
+    NRactwarr,NRactpend = [True,"NRactwarr"],[True,"NRactpend"]
     console.print("Do not report active warrants",style="bold red")
     console.print("Do not report active / pending charges",style="bold red")
+    return NRactwarr,NRactpend 
 def UbRazier(): 
+    Rtheftalcdrug = [True,"Rtheftalcdrug"]
     console.print("Report theft, alcohol, drug, or insurance / proof of financial responsibility infractions / lower level charges",style="bold red")
+    return  Rtheftalcdrug
 def UnBank(): 
+    R_ALL_DISPOS = [True,"R_ALL_DISPOS"]
     console.print("REPORT ALL DISPOSITIONS",style="bold red")
+    return R_ALL_DISPOS
 def via(): 
+    WeirdViaRule = [True,"WeirdViaRule"]
     console.print("Refer to R Client Specific Rules - Viacom for additional information",style="bold red")
-
+    return WeirdViaRule
 
 
 def client_cases(client):
@@ -210,6 +273,7 @@ def client_cases(client):
     Switch_func = client_switcher.get(client, lambda: "No special restrictions on entered client.")
     # Execute the function
     console.print(Switch_func(),style="bold red")
+    return Switch_func()
     # console.print(Switch_func())
 
 client = get_client(client)
